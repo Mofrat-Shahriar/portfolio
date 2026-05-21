@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md. Mofrat Shahriar | Power Systems Engineer & Researcher</title>
+  <meta name="description" content="Professional portfolio of Md. Mofrat Shahriar – Executive Engineer at BREB, EEE researcher specializing in renewable energy, smart grids, and power systems." />
+  <meta property="og:title" content="Md. Mofrat Shahriar | Power Systems Engineer" />
+  <meta property="og:description" content="Engineer. Researcher. Innovator in renewable energy and smart grid systems." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0B1F3A;
+      --navy-light: #132d54;
+      --gold: #C9963B;
+      --gold-light: #E6B96A;
+      --cream: #F8F4EE;
+      --cream-dark: #EDE8DF;
+      --text: #1A1A2E;
+      --text-muted: #5A5A72;
+      --white: #FFFFFF;
+      --border: rgba(11,31,58,0.12);
+      --section-pad: 6rem 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    /* ── NAVIGATION ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 4rem;
+      background: rgba(248,244,238,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 24px rgba(11,31,58,0.08); }
+
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0; right: 0;
+      height: 1px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.25s;
+    }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    .nav-cta {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 0.55rem 1.4rem;
+      border: 1.5px solid var(--navy);
+      color: var(--navy);
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-cta:hover { background: var(--navy); color: var(--white); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 7rem 4rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg-lines {
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(11,31,58,0.04) 80px),
+        repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(11,31,58,0.04) 80px);
+      pointer-events: none;
+    }
+
+    .hero-left { position: relative; z-index: 1; }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+    .hero-tag::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--navy);
+      margin-bottom: 0.3rem;
+    }
+    h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-title {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 460px;
+      margin-bottom: 2.5rem;
+      line-height: 1.85;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.9rem 2.2rem;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--navy-light); transform: translateY(-2px); }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.9rem 2.2rem;
+      border: 1.5px solid var(--border);
+      color: var(--navy);
+      font-size: 0.88rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--navy); transform: translateY(-2px); }
+
+    .hero-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 4px;
+      padding: 2.5rem 2.2rem;
+      width: 340px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(201,150,59,0.15);
+    }
+    .hero-card-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .hero-card-role {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1.8rem;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+    }
+    .hero-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+    .hero-stat-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-top: 0.1rem;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.8rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .hero-link {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .hero-link:hover { opacity: 1; }
+
+    /* ── SECTION COMMONS ── */
+    section { padding: var(--section-pad); }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 4rem; }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      max-width: 60px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--white); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+      margin-top: 3rem;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+    }
+
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .highlight-item {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      padding: 1.2rem 1.4rem;
+      border-left: 3px solid var(--gold);
+      background: var(--cream);
+      border-radius: 0 4px 4px 0;
+    }
+    .highlight-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .highlight-title {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--navy);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.2rem;
+    }
+    .highlight-text {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* ── RESEARCH INTERESTS ── */
+    #interests { background: var(--cream); }
+
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .interest-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .interest-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+    .interest-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(11,31,58,0.1); border-color: transparent; }
+    .interest-card:hover::before { transform: scaleX(1); }
+    .interest-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .interest-title {
+      font-weight: 500;
+      font-size: 0.92rem;
+      color: var(--navy);
+      letter-spacing: 0.04em;
+    }
+    .interest-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    /* ── EXPERIENCE ── */
+    #experience { background: var(--white); }
+
+    .timeline {
+      position: relative;
+      margin-top: 3rem;
+      padding-left: 2.5rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--gold) 0%, var(--border) 100%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.5rem;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      transform: translateX(calc(-50% + 0.5px));
+    }
+
+    .timeline-date {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+    .timeline-role {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+    .timeline-org {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+    }
+    .timeline-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .timeline-body ul { padding-left: 1.2rem; }
+    .timeline-body li { margin-bottom: 0.4rem; }
+
+    /* ── RESEARCH & PUBLICATIONS ── */
+    #research { background: var(--navy); color: var(--white); }
+    #research h2 { color: var(--white); }
+    #research .section-label { color: var(--gold-light); }
+    #research .section-label::after { background: var(--gold-light); }
+
+    .pub-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .pub-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 1.8rem;
+      transition: background 0.25s, transform 0.25s;
+      position: relative;
+    }
+    .pub-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
+
+    .pub-type {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 2px;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .pub-type-journal { background: rgba(201,150,59,0.2); color: var(--gold-light); }
+    .pub-type-conf { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); }
+    .pub-type-thesis { background: rgba(93,202,165,0.2); color: #5DCAA5; }
+
+    .pub-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+    }
+
+    .pub-authors {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.5rem;
+    }
+    .pub-venue {
+      font-size: 0.78rem;
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+    .pub-doi {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+      margin-top: 0.5rem;
+      word-break: break-all;
+    }
+
+    /* ── SKILLS ── */
+    #skills { background: var(--cream); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .skill-group {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.8rem;
+    }
+
+    .skill-group-title {
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      font-size: 0.78rem;
+      padding: 0.35rem 0.85rem;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: var(--navy);
+      font-weight: 400;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── TRAINING ── */
+    #training { background: var(--white); }
+
+    .training-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.2rem;
+      margin-top: 3rem;
+    }
+
+    .training-item {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      padding: 1.4rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--cream);
+      transition: border-color 0.2s;
+    }
+    .training-item:hover { border-color: var(--gold); }
+    .training-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+    .training-name {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+    .training-org {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .training-date {
+      font-size: 0.72rem;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      margin-top: 0.2rem;
+    }
+
+    /* ── PHD STATEMENT ── */
+    #phd {
+      background: var(--cream-dark);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .phd-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .phd-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.6;
+      border-left: 3px solid var(--gold);
+      padding-left: 1.5rem;
+    }
+
+    .phd-goals { display: flex; flex-direction: column; gap: 1rem; }
+
+    .phd-goal {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .phd-goal-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 2rem;
+    }
+    .phd-goal-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding-top: 0.3rem;
+    }
+    .phd-goal-title {
+      font-weight: 500;
+      color: var(--navy);
+      font-size: 0.92rem;
+      margin-bottom: 0.2rem;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--navy); color: var(--white); }
+    #contact h2 { color: var(--white); }
+    #contact .section-label { color: var(--gold-light); }
+    #contact .section-label::after { background: var(--gold-light); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      margin-top: 3rem;
+      align-items: start;
+    }
+
+    .contact-info p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 2rem;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.88rem;
+      transition: color 0.2s;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .contact-link:hover { color: var(--gold-light); }
+    .contact-link-icon {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .contact-form-note {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 2rem;
+    }
+    .contact-form-note h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: var(--white);
+    }
+    .contact-form-note p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.8;
+    }
+    .contact-form-note a {
+      color: var(--gold-light);
+      text-decoration: none;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 2rem 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    footer p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.04em;
+    }
+    footer a {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 0.78rem;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up {
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards;
+    }
+    .fade-up.d1 { animation-delay: 0.1s; }
+    .fade-up.d2 { animation-delay: 0.25s; }
+    .fade-up.d3 { animation-delay: 0.4s; }
+    .fade-up.d4 { animation-delay: 0.55s; }
+    .fade-up.d5 { animation-delay: 0.7s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      #hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; gap: 2rem; }
+      .hero-right { justify-content: flex-start; }
+      .hero-card { width: 100%; }
+      .container { padding: 0 1.5rem; }
+      .about-grid, .pub-grid, .phd-inner, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-brand">Mofrat Shahriar</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#interests">Research</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#research">Publications</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:mofrat.eee.ruet@gmail.com" class="nav-cta">Get in Touch</a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-lines"></div>
+    <div class="hero-left">
+      <div class="hero-tag fade-up d1">Power Systems Engineer &amp; Researcher</div>
+      <h1 class="fade-up d2">Md. <em>Mofrat</em><br>Shahriar</h1>
+      <p class="hero-title fade-up d3">Executive Engineer · BREB, Bangladesh</p>
+      <p class="hero-desc fade-up d4">
+        An electrical engineer with 7+ years of hands-on experience leading power distribution operations across Rajshahi Division — now pursuing a PhD to push the frontier of renewable energy integration, smart grids, and adaptive protection systems.
+      </p>
+      <div class="hero-btns fade-up d5">
+        <a href="#research" class="btn-primary">View Publications →</a>
+        <a href="#contact" class="btn-secondary">PhD Enquiries</a>
+      </div>
+    </div>
+    <div class="hero-right fade-up d3">
+      <div class="hero-card">
+        <div class="hero-card-name">Md. Mofrat Shahriar</div>
+        <div class="hero-card-role">B.Sc. EEE · RUET · MSc (In Progress) · RUET</div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-num">7+</div>
+            <div class="hero-stat-label">Years in BREB</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">2</div>
+            <div class="hero-stat-label">IEEE Publications</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">6+</div>
+            <div class="hero-stat-label">Specialised Trainings</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">1</div>
+            <div class="hero-stat-label">Google Scholar Profile</div>
+          </div>
+        </div>
+        <div class="hero-links">
+          <a href="https://scholar.google.com/citations?user=oIdgwScAAAAJ&hl=en&oi=sra" target="_blank" class="hero-link">Google Scholar</a>
+          <a href="https://www.linkedin.com/in/mofrat-shahriar-2b66bb9a" target="_blank" class="hero-link">LinkedIn</a>
+          <a href="https://sites.google.com/view/mofrat-shahriar" target="_blank" class="hero-link">Google Site</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">About Me</div>
+      <h2>Engineer. Researcher.<br>Problem Solver.</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I am an Electrical and Electronic Engineer from Rajshahi University of Engineering &amp; Technology (RUET), currently serving as <strong>Executive Engineer (Current Charge)</strong> at the Bangladesh Rural Electrification Board (BREB) — one of the country's largest power utilities.
+          </p>
+          <p>
+            In my role, I lead system protection and design operations for Rajshahi Division: overseeing planning, fault investigation, equipment coordination, and technical standardisation to ensure reliable power delivery to rural communities.
+          </p>
+          <p>
+            Alongside my professional duties, I am actively pursuing an MSc at RUET and conducting research at the intersection of renewable energy, machine learning, and smart grid technologies. My long-term goal is a PhD at a top-ranked university in the US or Australia, where I can advance intelligent energy systems that address real-world power challenges in developing nations.
+          </p>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">⚡</div>
+            <div>
+              <div class="highlight-title">Power Distribution Leadership</div>
+              <div class="highlight-text">Leading protection, design, and fault analysis for an entire administrative division's rural electrification grid.</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🔬</div>
+            <div>
+              <div class="highlight-title">Active IEEE Researcher</div>
+              <div class="highlight-text">Published at IEEE ICEEE 2017; presented at an international mathematics conference in 2024; current work on RL-based protection coordination.</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🎓</div>
+            <div>
+              <div class="highlight-title">Scholarship &amp; Academic Excellence</div>
+              <div class="highlight-text">Four merit scholarships from primary to HSC level; WES-evaluated GPA of 3.31/4.00.</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🌱</div>
+            <div>
+              <div class="highlight-title">Smart Grid &amp; Renewable Integration</div>
+              <div class="highlight-text">Trained in substation automation, smart metering, net metering, and solar irrigation grid integration.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH INTERESTS -->
+  <section id="interests">
+    <div class="container">
+      <div class="section-label">Research Interests</div>
+      <h2>What I Study &amp; Explore</h2>
+      <div class="interests-grid">
+        <div class="interest-card">
+          <div class="interest-icon">🔋</div>
+          <div class="interest-title">Power Electronics</div>
+          <div class="interest-desc">Converters, inverters, and control strategies for modern power networks</div>
+        </div>
+        <div class="interest-card">
+          <div class="interest-icon">🌐</div>
+          <div class="interest-title">Power Systems</div>
+          <div class="interest-desc">Grid stability, protection coordination, and distribution system analysis</div>
+        </div>
+        <div class="interest-card">
+          <div class="interest-icon">☀️</div>
+          <div class="interest-title">Renewable Energy</div>
+          <div class="interest-desc">Wind, solar, and hybrid energy systems with storage integration (SMES, BESS)</div>
+        </div>
+        <div class="interest-card">
+          <div class="interest-icon">🧠</div>
+          <div class="interest-title">Smart Grid &amp; AI</div>
+          <div class="interest-desc">Reinforcement learning, fuzzy logic, and ML-based intelligent grid control</div>
+        </div>
+        <div class="interest-card">
+          <div class="interest-icon">🔗</div>
+          <div class="interest-title">Grid Integration</div>
+          <div class="interest-desc">Inverter-rich networks, DER coordination, and grid-interactive energy systems</div>
+        </div>
+        <div class="interest-card">
+          <div class="interest-icon">📊</div>
+          <div class="interest-title">Energy Management</div>
+          <div class="interest-desc">Optimal energy scheduling, frequency stability, and hybrid microgrid control</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label">Professional Experience</div>
+      <h2>Career Timeline</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-date">August 2025 — Present</div>
+          <div class="timeline-role">Executive Engineer (Current Charge)</div>
+          <div class="timeline-org">Bangladesh Rural Electrification Board (BREB) · Rajshahi Division</div>
+          <div class="timeline-body">
+            <ul>
+              <li>Lead system protection and design activities for all distribution infrastructure in Rajshahi Division.</li>
+              <li>Oversee planning, fault investigation, equipment coordination, and technical standardisation.</li>
+              <li>Provide technical guidance to engineering staff to ensure safe and efficient power delivery.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">November 2018 — August 2025</div>
+          <div class="timeline-role">Assistant Engineer</div>
+          <div class="timeline-org">Bangladesh Rural Electrification Board (BREB)</div>
+          <div class="timeline-body">
+            <ul>
+              <li>Conducted electrical testing of transformers, cables, and equipment per ANSI and IEC standards.</li>
+              <li>Ensured design integrity, maintenance protocols, and safety compliance in rural electrification projects.</li>
+              <li>Supported quality assurance and technical evaluation for power distribution infrastructure across rural Bangladesh.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">February 2018 — November 2018</div>
+          <div class="timeline-role">Instructor (Electrical)</div>
+          <div class="timeline-org">Borak Polytechnic Institute · Dhaka, Bangladesh</div>
+          <div class="timeline-body">
+            <ul>
+              <li>Taught: Basic Electricity, Electronics, Electrical Circuits, Industrial Electronics, Machines, Generation, Transmission &amp; Distribution.</li>
+              <li>Conducted theory and practical classes per BTEB curriculum; prepared lesson plans, papers, and academic reports.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">November 2017 — February 2018</div>
+          <div class="timeline-role">Executive (Engineering Department)</div>
+          <div class="timeline-org">SQUARE Herbal &amp; Nutraceuticals Ltd.</div>
+          <div class="timeline-body">
+            <ul>
+              <li>Managed preventive and breakdown maintenance of process machinery for production units.</li>
+              <li>Participated in installation, commissioning, and qualification of equipment; maintained engineering documentation.</li>
+              <li>Prepared SOPs/EOPs and conducted staff training.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH & PUBLICATIONS -->
+  <section id="research">
+    <div class="container">
+      <div class="section-label">Research &amp; Publications</div>
+      <h2>Academic Contributions</h2>
+      <div class="pub-grid">
+
+        <div class="pub-card">
+          <span class="pub-type pub-type-conf">IEEE Conference Paper</span>
+          <div class="pub-title">"Power Quality Improvement of DFIG and PMSG Based Hybrid Wind Farm Using SMES"</div>
+          <div class="pub-authors">M. A. A. Khan, <strong style="color:rgba(255,255,255,0.8)">M. M. Shahriar</strong> and M. S. Islam</div>
+          <div class="pub-venue">2nd International Conference on Electrical &amp; Electronic Engineering (ICEEE), Rajshahi, Bangladesh · 2017</div>
+          <div class="pub-doi">DOI: 10.1109/CEEE.2017.8412899</div>
+        </div>
+
+        <div class="pub-card">
+          <span class="pub-type pub-type-conf">Conference Presentation</span>
+          <div class="pub-title">"Fuzzy Logic Based Energy Management of a Hybrid Power System to Ensure Frequency Stability and Sustainable Green Environment"</div>
+          <div class="pub-authors"><strong style="color:rgba(255,255,255,0.8)">Md. Mofrat Shahriar</strong> and Tamanna Tasnim Prova</div>
+          <div class="pub-venue">23rd International Mathematics Conference · University of Rajshahi, Bangladesh · May 2024</div>
+        </div>
+
+        <div class="pub-card">
+          <span class="pub-type pub-type-thesis">Undergraduate Thesis</span>
+          <div class="pub-title">"Stability Analysis of DFIG and PMSG Based Hybrid Wind Farm Using SMES"</div>
+          <div class="pub-authors"><strong style="color:rgba(255,255,255,0.8)">Md. Mofrat Shahriar</strong></div>
+          <div class="pub-venue">RUET · Department of EEE · 2016</div>
+          <div class="pub-doi">Developed hybrid wind system using MATLAB/Simulink; designed SMES unit for power stabilization; demonstrated measurable improvement in power quality metrics.</div>
+        </div>
+
+        <div class="pub-card" style="border: 1px solid rgba(201,150,59,0.3); background: rgba(201,150,59,0.07);">
+          <span class="pub-type pub-type-journal">Current Research</span>
+          <div class="pub-title">RL-Based Adaptive Protection Coordination for Inverter-Rich Rural Distribution Systems</div>
+          <div class="pub-authors"><strong style="color:rgba(255,255,255,0.8)">Md. Mofrat Shahriar</strong></div>
+          <div class="pub-venue">MSc Research (In Progress) · RUET · 2024–Present</div>
+          <div class="pub-doi">Investigating reinforcement learning approaches for dynamic relay coordination in distribution networks with high penetration of inverter-based resources.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">Technical Skills</div>
+      <h2>Tools &amp; Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <div class="skill-group-title">Programming &amp; Simulation</div>
+          <div class="skill-list">
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">Simulink</span>
+            <span class="skill-tag">C Programming</span>
+            <span class="skill-tag">Proteus</span>
+            <span class="skill-tag">Arduino</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Power Systems</div>
+          <div class="skill-list">
+            <span class="skill-tag">Relay Coordination</span>
+            <span class="skill-tag">Fault Analysis</span>
+            <span class="skill-tag">Equipment Testing</span>
+            <span class="skill-tag">System Protection</span>
+            <span class="skill-tag">Substation Design</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Standards &amp; Compliance</div>
+          <div class="skill-list">
+            <span class="skill-tag">ANSI</span>
+            <span class="skill-tag">IEC</span>
+            <span class="skill-tag">BREB Standards</span>
+            <span class="skill-tag">IEEE</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Research Methods</div>
+          <div class="skill-list">
+            <span class="skill-tag">Reinforcement Learning</span>
+            <span class="skill-tag">Fuzzy Logic</span>
+            <span class="skill-tag">SMES Modelling</span>
+            <span class="skill-tag">Wind Farm Simulation</span>
+            <span class="skill-tag">LaTeX</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING -->
+  <section id="training">
+    <div class="container">
+      <div class="section-label">Trainings &amp; Workshops</div>
+      <h2>Continuous Professional Development</h2>
+      <div class="training-grid">
+        <div class="training-item">
+          <div class="training-dot"></div>
+          <div>
+            <div class="training-name">Substation Automation System</div>
+            <div class="training-org">Bangladesh Power Management Institute (BPMI)</div>
+            <div class="training-date">Feb–Mar 2026</div>
+          </div>
+        </div>
+        <div class="training-item">
+          <div class="training-dot"></div>
+          <div>
+            <div class="training-name">33/11 KV Indoor Substation Maintenance</div>
+            <div class="training-org">Bangladesh Rural Electrification Board (BREB)</div>
+            <div class="training-date">Jan–Feb 2024</div>
+          </div>
+        </div>
+        <div class="training-item">
+          <div class="training-dot"></div>
+          <div>
+            <div class="training-name">Basic Procurement Training</div>
+            <div class="training-org">Bangladesh Public Procurement Authority (BPPA)</div>
+            <div class="training-date">Jan–Feb 2022</div>
+          </div>
+        </div>
+        <div class="training-item">
+          <div class="training-dot"></div>
+          <div>
+            <div class="training-name">Net Metering &amp; Solar Irrigation Grid Integration</div>
+            <div class="training-org">SREDA, Bangladesh</div>
+            <div class="training-date">Feb 2021</div>
+          </div>
+        </div>
+        <div class="training-item">
+          <div class="training-dot"></div>
+          <div>
+            <div class="training-name">Smart Pre-Payment Metering &amp; Smart Grid</div>
+            <div class="training-org">Bangladesh Power Management Institute (BPMI)</div>
+            <div class="training-date">Oct–Nov 2020</div>
+          </div>
+        </div>
+        <div class="training-item">
+          <div class="training-dot"></div>
+          <div>
+            <div class="training-name">Portable Submarine Power Cable Fault Location System</div>
+            <div class="training-org">Iconic Engineering &amp; Trading Company Limited, Dhaka</div>
+            <div class="training-date">Jan 2025</div>
+          </div>
+        </div>
+        <div class="training-item">
+          <div class="training-dot"></div>
+          <div>
+            <div class="training-name">CT &amp; PT Test and Metering Procedure</div>
+            <div class="training-org">BREB System Operation Workshop, Savar</div>
+            <div class="training-date">Sep 2021</div>
+          </div>
+        </div>
+        <div class="training-item">
+          <div class="training-dot"></div>
+          <div>
+            <div class="training-name">Industrial Training — Ghorashal Thermal Power Station (950MW)</div>
+            <div class="training-org">BPDB, Bangladesh</div>
+            <div class="training-date">Jun–Jul 2015</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHD RESEARCH STATEMENT -->
+  <section id="phd">
+    <div class="container">
+      <div class="section-label">PhD Goals</div>
+      <h2>Research Vision</h2>
+      <div class="phd-inner" style="margin-top:3rem;">
+        <div>
+          <blockquote class="phd-quote">
+            "I aim to bridge the gap between academic research and the real operational challenges of rural electrification in developing nations — through intelligent, adaptive, and renewable energy-driven solutions."
+          </blockquote>
+          <p style="margin-top:1.5rem; color:var(--text-muted); font-size:0.9rem;">
+            With 7+ years of field experience in power distribution and active MSc research in RL-based protection systems, I bring a uniquely practical perspective to advanced grid research. I am seeking PhD supervisors in Electrical Engineering — particularly those working on power systems, smart grids, or renewable integration — in the US or Australia.
+          </p>
+        </div>
+        <div class="phd-goals">
+          <div class="phd-goal">
+            <div class="phd-goal-num">01</div>
+            <div>
+              <div class="phd-goal-title">Intelligent Protection Systems</div>
+              <div class="phd-goal-text">Developing ML/RL-driven adaptive relay coordination for inverter-dominated distribution grids.</div>
+            </div>
+          </div>
+          <div class="phd-goal">
+            <div class="phd-goal-num">02</div>
+            <div>
+              <div class="phd-goal-title">Renewable Integration &amp; Stability</div>
+              <div class="phd-goal-text">Analysing and improving stability of high-penetration solar/wind systems in rural distribution networks.</div>
+            </div>
+          </div>
+          <div class="phd-goal">
+            <div class="phd-goal-num">03</div>
+            <div>
+              <div class="phd-goal-title">Smart Grid Technologies</div>
+              <div class="phd-goal-text">Leveraging advanced metering, substation automation, and energy storage for next-generation grid management.</div>
+            </div>
+          </div>
+          <div class="phd-goal">
+            <div class="phd-goal-num">04</div>
+            <div>
+              <div class="phd-goal-title">Real-World Application</div>
+              <div class="phd-goal-text">Translating research outcomes into deployable solutions for the Bangladesh and South Asian energy sector.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">Get in Touch</div>
+      <h2>Let's Connect</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>Whether you are a potential PhD supervisor, a collaborator, or a fellow researcher — I would be very glad to connect. My primary interest right now is finding the right research group for a fully-funded PhD in Electrical Engineering.</p>
+          <div class="contact-links">
+            <a href="mailto:mofrat.eee.ruet@gmail.com" class="contact-link">
+              <div class="contact-link-icon">✉</div>
+              mofrat.eee.ruet@gmail.com
+            </a>
+            <a href="https://scholar.google.com/citations?user=oIdgwScAAAAJ&hl=en&oi=sra" target="_blank" class="contact-link">
+              <div class="contact-link-icon">🎓</div>
+              Google Scholar Profile
+            </a>
+            <a href="https://www.linkedin.com/in/mofrat-shahriar-2b66bb9a" target="_blank" class="contact-link">
+              <div class="contact-link-icon">💼</div>
+              LinkedIn Profile
+            </a>
+            <a href="https://sites.google.com/view/mofrat-shahriar" target="_blank" class="contact-link">
+              <div class="contact-link-icon">🌐</div>
+              Google Sites Portfolio
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-note">
+          <h3>For PhD Supervisors &amp; Collaborators</h3>
+          <p>
+            I am actively looking for PhD opportunities starting in 2025–2026 in the United States or Australia. My research background spans power systems, renewable energy integration, and intelligent grid control. I have field experience leading protection and design operations at scale, and am currently conducting MSc research on RL-based adaptive protection coordination.
+            <br><br>
+            Please reach out at <a href="mailto:mofrat.eee.ruet@gmail.com">mofrat.eee.ruet@gmail.com</a> — I am happy to share my full CV, research proposal, and any additional materials you may require.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Md. Mofrat Shahriar · All rights reserved</p>
+    <p>Built for academic outreach · <a href="mailto:mofrat.eee.ruet@gmail.com">mofrat.eee.ruet@gmail.com</a></p>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Scroll-triggered fade-in for sections
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.timeline-item, .interest-card, .pub-card, .skill-group, .training-item, .phd-goal').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
